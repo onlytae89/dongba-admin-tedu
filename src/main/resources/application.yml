@@ -5,6 +5,7 @@ server:
     context-path: /
   tomcat:
     max-threads: 1000
+    min-spare-threads: 100
 
 #spring
 spring:
@@ -15,6 +16,7 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/pages/
     suffix: .html
+    cache: false
   aop:
     proxy-target-class: true
 

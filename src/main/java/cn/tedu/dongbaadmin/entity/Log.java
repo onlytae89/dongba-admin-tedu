@@ -6,11 +6,11 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class SysLog implements Serializable {
+public class Log implements Serializable {
 
     /**此id为序列化唯一标识,尤其在反序列化时,
      * 对此id的要求就会更严格*/
-    private static final long serialVersionUID = 8924387722922123121L;
+    private static final long serialVersionUID = 1L;
 
     private Integer id;
     //用户名

@@ -420,21 +420,26 @@ desired effect
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <script type="text/javascript">
-    $(function(){//页面加载完成以后执行
-       doLoadUI("load-log-id","log/log_list");
-       doLoadUI("load-menu-id","menu/menu_list")
-       doLoadUI("load-dept-id","dept/dept_list")
-       doLoadUI("load-role-id","role/role_list")
-       doLoadUI("load-user-id","user/user_list")
-    })
-    function doLoadUI(id,url){
-    	$("#"+id).click(function(){//事件处理函数(回调)
-    	//在mainContentId位置,异步请求url对应的资源
-    	//服务端响应的数据会插入到mainContentId对应的位置
-    	//其中:load函数为jquery中的一个ajax函数
-    		$("#mainContentId").load(url);
-    	});
-    }
+  ['log', 'menu', 'dept', 'role', 'user'].forEach(
+      module => $(`#load-${module}-id`).click(
+          () => $('#mainContentId').load(`${module}/${module}_list`)
+      )
+  );
+  // $(function(){//页面加载完成以后执行
+  //    doLoadUI("load-log-id","log/log_list");
+  //    doLoadUI("load-menu-id","menu/menu_list")
+  //    doLoadUI("load-dept-id","dept/dept_list")
+  //    doLoadUI("load-role-id","role/role_list")
+  //    doLoadUI("load-user-id","user/user_list")
+  // })
+  // function doLoadUI(id,url){
+  //   $("#"+id).click(function(){//事件处理函数(回调)
+  //   //在mainContentId位置,异步请求url对应的资源
+  //   //服务端响应的数据会插入到mainContentId对应的位置
+  //   //其中:load函数为jquery中的一个ajax函数
+  //     $("#mainContentId").load(url);
+  //   });
+  // }
 </script>
 </body>
 </html>

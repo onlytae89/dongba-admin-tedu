@@ -8,6 +8,8 @@ spring:
     url: jdbc:mysql:///jtsys?serverTimezone=GMT%2B8&characterEncoding=utf8
     username: root
     password: root
+  thymeleaf:
+    cache: false
   aop:
     proxy-target-class: true
 

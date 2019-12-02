@@ -31,7 +31,7 @@ mybatis:
 #lOG
 logging:
   level:
-    com.cy: DEBUG
+    cn.tedu: DEBUG
 
 #spring thread pool
 #async-thread-pool:

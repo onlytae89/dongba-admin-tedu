@@ -19,7 +19,7 @@ public interface LogDao {
     /**
      * 按页查询某个用户的日志
      * @param username 用户名，支持模糊查询，可为null
-     * @param startIndex 页数，从1开始
+     * @param startIndex sql limit 语句的开始索引，从0开始
      * @param pageSize 每页记录数
      * @return 当前页的日志列表
      */

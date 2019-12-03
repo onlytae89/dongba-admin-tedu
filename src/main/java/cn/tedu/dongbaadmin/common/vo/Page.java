@@ -2,12 +2,14 @@ package cn.tedu.dongbaadmin.common.vo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.util.List;
 
 @Data
 @NoArgsConstructor
+@Accessors
 public class Page<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,3 +32,4 @@ public class Page<T> implements Serializable {
         this.records = records;
         this.pageCount=(rowCount-1)/pageSize+1;
     }
+}
